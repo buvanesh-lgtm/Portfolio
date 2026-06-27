@@ -5,7 +5,7 @@ function Contact() {
   const [copied, setCopied] = useState(false)
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText('buvanesh@email.com')
+    navigator.clipboard.writeText('buvaneshs693@gmail.com')
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
   }
@@ -34,7 +34,7 @@ function Contact() {
             <span className="contact-icon">✉</span>
             <div>
               <span className="contact-label">Email</span>
-              <span className="contact-value">buvanesh@email.com</span>
+              <span className="contact-value">buvaneshs693@gmail.com</span>
             </div>
           </div>
           <button className="copy-btn" onClick={handleCopyEmail}>
@@ -43,8 +43,8 @@ function Contact() {
         </div>
 
         {/* GitHub */}
-        <a  
-          href="https://github.com/buvanesh-lgtm"
+        
+         <a href="https://github.com/buvanesh-lgtm"
           target="_blank"
           rel="noreferrer"
           className="contact-card contact-card-link"
@@ -60,8 +60,8 @@ function Contact() {
         </a>
 
         {/* LinkedIn */}
-        <a  
-          href="https://www.linkedin.com/in/buvanesh-s-1b086b3b6"
+        
+          <a href="https://www.linkedin.com/in/buvanesh-s-1b086b3b6"
           target="_blank"
           rel="noreferrer"
           className="contact-card contact-card-link"
@@ -70,7 +70,7 @@ function Contact() {
             <span className="contact-icon">in</span>
             <div>
               <span className="contact-label">LinkedIn</span>
-              <span className="contact-value">linkedin.com/in/buvanesh</span>
+              <span className="contact-value">linkedin.com/in/buvanesh-s</span>
             </div>
           </div>
           <span className="contact-arrow">→</span>
