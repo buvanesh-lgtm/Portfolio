@@ -211,6 +211,19 @@ p {
   font-weight: 600;
   font-size: 0.95rem;
 }
+.btn-resume {
+  border: 1px solid #333;
+  color: #444;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.btn-resume.disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
 
 /* ── Section common ── */
 .section {

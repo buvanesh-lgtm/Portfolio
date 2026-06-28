@@ -59,9 +59,11 @@ function Home() {
         I build web apps using React & Spring Boot.
       </p>
 
+
       <div className="hero-buttons">
-        <Link to="/projects" className="btn-primary">View Projects</Link>
-        <Link to="/contact" className="btn-outline">Contact Me</Link>
+      <Link to="/projects" className="btn-primary">View Projects</Link>
+      <Link to="/contact" className="btn-outline">Contact Me</Link>
+      <a className="btn-resume disabled">Resume — Coming Soon</a>
       </div>
     </section>
   )
