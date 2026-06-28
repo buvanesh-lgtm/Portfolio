@@ -17,6 +17,64 @@ a {
   text-decoration: none;
   color: inherit;
 }
+/* ── Loader ── */
+.loader-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: #0d0d0d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: loaderFadeOut 0.5s ease 1.8s forwards;
+}
+
+.loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.loader-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #5DCAA5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: loaderPulse 1s ease-in-out infinite;
+}
+
+.loader-initial {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #5DCAA5;
+  font-family: 'Inter', sans-serif;
+}
+
+.loader-text {
+  font-size: 0.78rem;
+  color: #444;
+  letter-spacing: 2px;
+  font-family: 'Fira Code', monospace;
+  animation: loaderBlink 1s ease-in-out infinite;
+}
+
+@keyframes loaderPulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(93,202,165,0.3); }
+  50% { transform: scale(1.05); box-shadow: 0 0 0 12px rgba(93,202,165,0); }
+}
+
+@keyframes loaderBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+@keyframes loaderFadeOut {
+  to { opacity: 0; pointer-events: none; }
+}
 /* ── Typography ── */
 h1 {
   font-size: 3.5rem;
@@ -735,5 +793,23 @@ p {
     background-color: #0d0d0d;
     border-bottom: 1px solid #1a1a1a;
     padding: 24px 40px;
+  }
+}
+/* ── Spotlight ── */
+.spotlight {
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(93,202,165,0.07) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  transition: left 0.08s ease, top 0.08s ease;
+}
+
+@media (max-width: 600px) {
+  .spotlight {
+    display: none;
   }
 }
